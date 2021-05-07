@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Added by KM 4/26/21
+# Hide api keys 
+config.py
+
+#ignore Jupyter checkpoints 
+.ipynb_checkpoints
+
+# Mac User auto-generated file (Desktop Service Store)
+.DS_Store
+© 2021 GitHub, Inc.
