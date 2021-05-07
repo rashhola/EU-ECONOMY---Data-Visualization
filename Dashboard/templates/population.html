@@ -6,12 +6,32 @@
   <title>EU Countiries Population</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../static/style_visual.css">
+
+   <!-- Leaflet CSS -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+
+    <!-- Leaflet JS-->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Leaflet-Choropleth JavaScript -->
+    <script type="text/javascript" src="..static/choropleth/choropleth.js"></script>
+
+    <!-- Our JS -->
+    <script type="text/javascript" src="..static/choropleth/config.js"></script>
+    <script type="text/javascript" src="../static/choropleth/logic.js"></script>
 </head>
  
 <body class="background-img">
     <nav class="navbar navbar-light">
         <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1"><h1><a href="index.html"><img src=assets/barcharteuro.jpg alt="weather vane" width="150" height="150" style="border: whitesmoke 3px solid"/></a> The European Union Economy</h1>
+          <span class="navbar-brand mb-0 h1"><h1><a href="index.html"><img src=../static/images/barcharteuro.jpg alt="weather vane" width="150" height="150" style="border: whitesmoke 3px solid"/></a> The European Union Economy</h1>
           </span>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,18 +59,13 @@
       </nav>
     
   <div class='container'>
-
-    <div class="row">
-
-      <div id="population" class="col-md-8">
-        <h2>EU Countries Population</h2>
+    <div id="population">
+      <h2>Population by EU Country</h2>
       <hr>
-        <p> <img src="assets/choropleth.PNG" class="align-left small" alt=cloudy_visual/> </p>
-      </div>
-      
-      
-
+      <div id="map"></div>
     </div>
+      
+      
   </div>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
