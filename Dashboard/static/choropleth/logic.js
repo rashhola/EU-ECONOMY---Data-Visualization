@@ -1,5 +1,5 @@
 // Creating map object
-var basemapId = "#map";
+var basemapId = "map";
 var basemapOptions = {center: [49.5035, 9.5407], // center of the EU by experts at the National Geographic Institute in Paris
                       zoom: 4}
 var myMap = L.map(basemapId, basemapOptions);
@@ -15,7 +15,7 @@ var tileLayerOptions = {attribution: "© <a href='https://www.mapbox.com/about/m
 L.tileLayer(tileLayerUrlTemplate, tileLayerOptions).addTo(myMap);
 
 // Load in GeoJSON data
-var geojsonPath = "../choropleth/european-union-countries.geojson";
+var geojsonPath = "european-union-countries.geojson";
 
 // var GeoJSON;
 var choroplethOptions =  {valueProperty: "pop_est", // data point colorized on map
