@@ -120,8 +120,8 @@
     }
     
     #gdp {
-        padding-left:50px;
-        padding-bottom:50px;
+        padding-left: 50px;
+        padding-bottom: 50px;
     }
     
     #team {
@@ -355,11 +355,10 @@ humidity and wind speed pages: landing page */
         fill: #fff;
         text-anchor: middle;
     }
-    
-    .countryCircle {
+    /* .countryCircle {
         fill: #4b1348;
         stroke: #412727;
-    }
+    } */
     /* styles the slider */
     
     input[type='range'] {
