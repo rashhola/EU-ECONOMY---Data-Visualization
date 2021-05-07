@@ -356,10 +356,10 @@ humidity and wind speed pages: landing page */
         text-anchor: middle;
     }
     
-    .countryCircle {
+    /* .countryCircle {
         fill: #4b1348;
         stroke: #412727;
-    }
+    } */
     /* styles the slider */
     
     input[type='range'] {
@@ -420,3 +420,15 @@ humidity and wind speed pages: landing page */
     .y.axis1 {
         font-size: 0.9em;
     }
+
+    /* Erin's CSS for map */
+
+  #map,
+  /*body, */
+  html {
+    height: 100%;
+  }
+  
+  .leaflet-popup-content {
+    text-align: center;
+  }
