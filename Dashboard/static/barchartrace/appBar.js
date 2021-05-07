@@ -16,7 +16,7 @@ const margin = {
   top: 80,
   right: 0,
   bottom: 5,
-  left: 0
+  left: 2
 };
 
 var barPadding = (height - (margin.bottom + margin.top)) / (top_n * 5);
@@ -44,105 +44,21 @@ var barPadding = (height - (margin.bottom + margin.top)) / (top_n * 5);
 
 
 var year = 2005;
-
+var pause = false;
 
 d3.csv("../static/barchartrace/Clean_GDP.csv").then(function (data) {
   //if (error) throw error;
 
-  console.log(data);
 
-  // change number by converting the number into integer (preprocessing)
-  data.forEach(d => {
-    d.value = +d.value,
-      d.lastValue = +d.lastValue,
-      //d.value = isNaN(d.value) ? 0 : d.value,
-      d.year = +d.year,
-      d.colour = d3.hsl(Math.random() * 360, 0.75, 0.75)
-  });
+  function updateChart() {
 
-  console.log(data);
+    if (year > 2019) {
 
-  var yearSlice = data.filter(d => d.year == year)
-    //sort when the year stats
-    .sort((a, b) => b.value - a.value)
-    .slice(0, top_n);
+      return
+    }
 
-  yearSlice.forEach((d, i) => d.rank = i);
-
-  console.log('yearSlice: ', yearSlice)
-
-  var x = d3.scaleLinear()
-    .domain([0, d3.max(yearSlice, d => d.value)])
-    .range([margin.left, width - margin.right - 65]);
-
-  var y = d3.scaleLinear()
-    .domain([top_n, 0])
-    .range([height - margin.bottom, margin.top]);
-
-  var xAxis = d3.axisTop()
-    .scale(x)
-    .ticks(width > 500 ? 5 : 2)
-    .tickSize(-(height - margin.top - margin.bottom))
-    .tickFormat(d => d3.format(',')(d));
-
-  svg.append('g')
-    .attr('class', 'axis xAxis')
-    .attr('transform', `translate(0, ${margin.top})`)
-    .call(xAxis)
-    .selectAll('.tick line')
-    .classed('origin', d => d == 0);
-
-  svg.selectAll('rect.bar')
-    .data(yearSlice, d => d.name)
-    .enter()
-    .append('rect')
-    .attr('class', 'bar')
-    .attr('x', x(0) + 1)
-    .attr('width', d => x(d.value) - x(0) - 1)
-    .attr('y', d => y(d.rank) + 5)
-    .attr('height', y(1) - y(0) - barPadding)
-    .style('fill', d => d.colour);
-
-  svg.selectAll('text.label')
-    .data(yearSlice, d => d.name)
-    .enter()
-    .append('text')
-    .attr('class', 'label')
-    .attr('x', d => x(d.value) - 8)
-    .attr('y', d => y(d.rank) + 5 + ((y(1) - y(0)) / 2) + 1)
-    .style('text-anchor', 'end')
-    .html(d => d.name);
-
-  // var flag = svg.append("image")
-  //   .attr("xlink:src", "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png")
-  //   .attr('x', 250)
-  //   .attr('y', 250)
-  //   .attr("width", 150)
-  //   .attr("height", 150);
-
-
-  svg.selectAll('text.valueLabel')
-    .data(yearSlice, d => d.name)
-    .enter()
-    .append('text')
-    .attr('class', 'valueLabel')
-    .attr('x', d => x(d.value) + 5)
-    .attr('y', d => y(d.rank) + 5 + ((y(1) - y(0)) / 2) + 1)
-    .text(d => d3.format(',.0f')(d.lastValue));
-
-  var yearText = svg.append('text')
-    .attr('class', 'yearText')
-    .attr('x', width - margin.right)
-    .attr('y', height - 25)
-    .style('text-anchor', 'end')
-    .html(~~year)
-    .call(halo, 10);
-
-
-
-
-  // This is when the animation happens
-  var ticker = d3.interval(e => {
+    d3.select("#slider").property("value", year)
+    d3.select("#range").html(year)
 
     yearSlice = data.filter(d => d.year == year)
 
@@ -267,11 +183,128 @@ d3.csv("../static/barchartrace/Clean_GDP.csv").then(function (data) {
       .attr('y', d => y(top_n + 1) + 5)
       .remove();
 
-    yearText.html(~~year);
 
+
+
+  }
+
+  function tickerUpdate(e) {
+    updateChart()
     if (year == 2019) ticker.stop();
-    year = d3.format('.1f')((+year) + 1);
-  }, tickDuration);
+    year = +year + 1;
+  }
+
+  console.log(data);
+
+  // change number by converting the number into integer (preprocessing)
+  data.forEach(d => {
+    d.value = +d.value,
+      d.lastValue = +d.lastValue,
+      //d.value = isNaN(d.value) ? 0 : d.value,
+      d.year = +d.year,
+      d.colour = d3.hsl(Math.random() * 360, 0.75, 0.75)
+  });
+
+  console.log(data);
+
+  var yearSlice = data.filter(d => d.year == year)
+    //sort when the year stats
+    .sort((a, b) => b.value - a.value)
+    .slice(0, top_n);
+
+  yearSlice.forEach((d, i) => d.rank = i);
+
+  console.log('yearSlice: ', yearSlice)
+
+  var x = d3.scaleLinear()
+    .domain([0, d3.max(yearSlice, d => d.value)])
+    .range([margin.left, width - margin.right - 65]);
+
+  var y = d3.scaleLinear()
+    .domain([top_n, 0])
+    .range([height - margin.bottom, margin.top]);
+
+  var xAxis = d3.axisTop()
+    .scale(x)
+    .ticks(width > 500 ? 5 : 2)
+    .tickSize(-(height - margin.top - margin.bottom))
+    .tickFormat(d => d3.format(',')(d));
+
+  svg.append('g')
+    .attr('class', 'axis xAxis')
+    .attr('transform', `translate(0, ${margin.top})`)
+    .call(xAxis)
+    .selectAll('.tick line')
+    .classed('origin', d => d == 0);
+
+  svg.selectAll('rect.bar')
+    .data(yearSlice, d => d.name)
+    .enter()
+    .append('rect')
+    .attr('class', 'bar')
+    .attr('x', x(0) + 1)
+    .attr('width', d => x(d.value) - x(0) - 1)
+    .attr('y', d => y(d.rank) + 5)
+    .attr('height', y(1) - y(0) - barPadding)
+    .style('fill', d => d.colour);
+
+  svg.selectAll('text.label')
+    .data(yearSlice, d => d.name)
+    .enter()
+    .append('text')
+    .attr('class', 'label')
+    .attr('x', d => x(d.value) - 8)
+    .attr('y', d => y(d.rank) + 5 + ((y(1) - y(0)) / 2) + 1)
+    .style('text-anchor', 'end')
+    .html(d => d.name);
+
+  // var flag = svg.append("image")
+  //   .attr("xlink:src", "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png")
+  //   .attr('x', 250)
+  //   .attr('y', 250)
+  //   .attr("width", 150)
+  //   .attr("height", 150);
+
+
+  svg.selectAll('text.valueLabel')
+    .data(yearSlice, d => d.name)
+    .enter()
+    .append('text')
+    .attr('class', 'valueLabel')
+    .attr('x', d => x(d.value) + 5)
+    .attr('y', d => y(d.rank) + 5 + ((y(1) - y(0)) / 2) + 1)
+    .text(d => d3.format(',.0f')(d.lastValue));
+
+
+
+
+
+
+  // This is when the animation happens
+  var ticker = d3.interval(tickerUpdate, tickDuration);
+
+  d3.select("#slider").on("change", function () {
+    year = +d3.select("#slider").property("value")
+    d3.select("#range").html(year);
+    updateChart()
+    pause = true
+    ticker.stop()
+  });
+
+  d3.select("#play").on("click", function () {
+    // year = 2005
+    // d3.select("#range").html(year);
+    // d3.select("#slider").property("value", 2005);
+    if (!pause) {
+      pause = true
+      ticker.stop()
+    }
+    else {
+      ticker = d3.interval(tickerUpdate, tickDuration)
+      pause = false
+    }
+
+  });
 
 });
 
@@ -283,5 +316,9 @@ const halo = function (text, strokeWidth) {
     .style('stroke-linejoin', 'round')
     .style('opacity', 1);
 
+
+
 }
+
+
 
