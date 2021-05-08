@@ -37,7 +37,6 @@
         padding-left: 20px;
     }
     /* resource page bullets */
-    
     ul {
         margin-left: 40px;
     }
@@ -97,20 +96,9 @@
         display: block;
         height: 40px;
     }
-    /* Charts with js */
-    
-    #summary {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        text-align: left;
-        padding: 10px;
-        margin-left: 50px;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-    
-    #main-wrapper,
+   
+   /* Charts with js */
+    #main-wrapper, 
     #population {
         border: solid 5px whitesmoke;
         background-color: lightblue;
@@ -127,7 +115,7 @@
         margin-bottom: 20px;
         padding-left: 20px;
         width:fit-content;
-        margin-left: 450px; 
+        margin-left: 350px; 
     }
     
     #gdp {
@@ -135,9 +123,10 @@
         background-color: lightblue;
         margin-bottom: 20px;
         width:fit-content;
-        margin-left: 300px;
-        padding-left:50px;
+        margin-left: 200px;
+        /* padding-left:50px; */
         padding-bottom:50px;
+        margin-right: 20px
     }
     
     #team {
@@ -154,7 +143,7 @@
     }
     
 
-    /* Comparison page */
+    /* carousel slides  */
     .carousel {
         background: lightblue;
         margin-left: 10px;
@@ -199,12 +188,13 @@
     
     #main-wrapper {
         margin: 30px auto;
-        max-width: 720px;
+        max-width: 1000px;
+        margin-left:350px;
     }
     
     #chart {
         margin: 0px auto;
-        width:700px;
+        width:1000px;
         
     }
     
@@ -290,6 +280,8 @@
 #chart {
     position: relative;
     margin-top: 0px;
+    margin-right: 30px;
+    /* width: 1000px; */
     /*    top: 0px;*/
 }
 
@@ -314,10 +306,8 @@
     display: none;
 }
 
-
 /* Legend
 ============================ */
-<<<<<<< HEAD
     
     #legend {
         float: right;
@@ -338,42 +328,7 @@
     #legend circle.ind {
         fill: none;
         stroke: #084298;
-    }
-    /* Slider */
-    
-    .slide-viewer {
-        position: relative;
-        overflow: hidden; 
-        height: 580px;
-       /* width: 100% */
-    }
-    
-    .slide-group {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-    
-    .slide {
-        width: 100%;
-        height: 100%;
-        display: none;
-        position: absolute;
-    }
-    
-    .slide:first-child {
-        display: block;
-    }
-    
-    .slide-col {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        width: 700px;
-        float: left;
-        margin: 10px;
-        padding-left: 10px;
-    }
-
+    } 
 
     /* James, add your css here */
     
@@ -383,10 +338,6 @@
         text-anchor: middle;
     }
     
-    /* .countryCircle {
-        fill: #4b1348;
-        stroke: #412727;
-    } */
     /* styles the slider */
     
     input[type='range'] {
@@ -449,162 +400,11 @@
     }
 
     /* Erin's CSS for map */
+  #map {
+      width:800px;
+      height:600px;
+  }
 
-  /*body, */
-  /* html {
-    height: 100%;
-  } */
-  
   .leaflet-popup-content {
     text-align: center;
   }
-=======
-
-#legend {
-    float: right;
-    max-width: 600px;
-}
-
-#legend .axistitle {
-    text-transform: uppercase;
-    font-size: .7rem;
-    margin-top: 10px;
-}
-
-#legend text.leglabel {
-    font-size: .7rem;
-    text-anchor: middle;
-}
-
-#legend circle.ind {
-    fill: none;
-    stroke: #084298;
-}
-
-
-/* Slider */
-
-.slide-viewer {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-}
-
-.slide-group {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-}
-
-.slide:first-child {
-    display: block;
-}
-
-.slide-col {
-    border: solid 5px whitesmoke;
-    background-color: lightblue;
-    width: 700px;
-    float: left;
-    margin: 10px;
-    padding-left: 10px;
-}
-
-
-/* James, add your css here */
-
-.countryText {
-    font-family: sans-serif;
-    fill: #fff;
-    text-anchor: middle;
-}
-
-
-/* .countryCircle {
-    fill: #4b1348;
-    stroke: #412727;
-} */
-
-
-/* styles the slider */
-
-input[type='range'] {
-    -webkit-appearance: none !important;
-    -webkit-border-radius: 5px;
-    background-color: rgb(53, 135, 212);
-    height: 10px;
-    width: 200px;
-    margin: 20px;
-}
-
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
-    -webkit-border-radius: 15px;
-    background-color: #bbb;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#888));
-    border: 1px solid #000;
-    height: 25px;
-    width: 25px;
-}
-
-#range {
-    font: 20px sans-serif;
-}
-
-input[type=range] {}
-
-div.tooltip {
-    position: absolute;
-    text-align: left;
-    padding: 2px;
-    font: 12px sans-serif;
-    background: #EDEDED;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-button {
-    width: 4em;
-    height: 2em;
-    background: rgb(53, 135, 212);
-    border: 1px solid rgb(53, 135, 212);
-    border-radius: 4px;
-    color: white;
-    font-size: 1.5em;
-}
-
-.label {
-    font-size: 1.3em;
-    text-align: left;
-}
-
-.x.axis1 {
-    font-size: 0.9em;
-}
-
-.y.axis1 {
-    font-size: 0.9em;
-}
-
-
-/* body {
-        padding: 0;
-        margin: 0;
-    } */
-
-#map {
-    width: 800px;
-    height: 600px;
-}
-
-.leaflet-popup-content {
-    text-align: center;
-}
->>>>>>> f0f6a0c81591d3137ea6e71642ba22c7eb4f2c8d
