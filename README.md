@@ -1,4 +1,5 @@
 # THE EUROPEAN UNION ECONOMY---Data-Visualization
+Website: <a href="https://kfmatovic716.github.io/EU-ECONOMY---Data-Visualization/">https://kfmatovic716.github.io/EU-ECONOMY---Data-Visualization/</a>
 
 <p><h1><img src="images/happy_python.png" width=50 height=50 align="middle"/><strong> The SQLing Pythons</strong><br><h3><emp> MEMBERS:  Erin Babamoto  |  Enrique Gallego  |  Katherine Matovic  |  James Milne | Rasheed Omolabi </emp></h3></h1></p>
 <hr>
@@ -37,16 +38,16 @@
 
 ## VISUALIZATIONS
 
-### Choropleth/Heatmap: Population by EU Country
+### Choropleth (using Leaflet/MapBox): Population by EU Country
 ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/population.png?raw=true)
 
-### Bar Chart Race: Gross Domestic Product (per capita)
-    ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/gdp.png?raw=true)
+### Bar Chart Race: Gross Domestic Product per capita (D3)
+![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/gdp.png?raw=true)
 
-### Animated Beeswarm: Gross Domestic Product (per capita) vs Unemployment Rates
-    ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/unemployment.png?raw=true)
+### Animated Beeswarm: Gross Domestic Product (per capita) vs Unemployment Rates (D3)
+![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/unemployment.png?raw=true)
 
-### Phillips Curve: Inflation Rate vs Unemployment Rates
-    ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/inflation.png?raw=true)
+### Animated Bubble Chart: Inflation Rate vs Unemployment Rates (D3)
+![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/inflation.png?raw=true)
    
 

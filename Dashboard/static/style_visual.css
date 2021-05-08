@@ -204,7 +204,8 @@
     
     #chart {
         margin: 0px auto;
-        /*	max-width: 600px;*/
+        width:700px;
+        
     }
     
     text {
