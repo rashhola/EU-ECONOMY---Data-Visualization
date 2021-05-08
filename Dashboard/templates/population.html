@@ -2,72 +2,74 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>EU Countiries Population</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../static/style_visual.css">
+    <meta charset="UTF-8">
+    <title>EU Countiries Population</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Leaflet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="stylesheet" type="text/css" href="../static/style_visual.css">
 
-   <!-- Leaflet CSS -->
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-   crossorigin=""/>
-
-    <!-- Leaflet JS-->
-    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-    crossorigin=""></script>
-
-    <!-- d3 JavaScript -->
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-
-    <!-- Leaflet-Choropleth JavaScript -->
-    <script type="text/javascript" src="../static/choropleth/choropleth.js"></script>
-
-    <!-- Our JS -->
-    <script type="text/javascript" src="../static/choropleth/config.js"></script>
-    <script type="text/javascript" src="../static/choropleth/logic.js"></script>
 </head>
- 
+
 <body class="background-img">
     <nav class="navbar navbar-light">
         <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1"><h1><a href="index.html"><img src=../static/images/barcharteuro.jpg alt="weather vane" width="150" height="150" style="border: whitesmoke 3px solid"/></a> The European Union Economy</h1>
-          </span>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-             <div class="collapse navbar-collapse" id="navbarNav">
+            <span class="navbar-brand mb-0 h1"><h1><a href="index.html"><img src=../static/images/barcharteuro.jpg alt="weather vane" width="150" height="150" style="border: whitesmoke 3px solid"/></a> The European Union Economy</h1>
+        </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                         <a class="nav-link active" aria-current="page" href="index.html"><h5>Home</h5></a>
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <h5>Home</h5>
+                        </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="resources.html"><h5>Resources</h5></a>
+                        <a class="nav-link" href="resources.html">
+                            <h5>Resources</h5>
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <h5>Economic Indicators</h5></a>
+                            <h5>Economic Indicators</h5>
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="population.html"><strong>Population</strong></a></li>
-                        <li><a class="dropdown-item" href="gdp.html"><strong>Gross Domestic Product</strong></a></li>
-                        <li><a class="dropdown-item" href="gdp_unemp.html"><strong>Gross Domestic Product vs Unemployment Rates</strong></a></li>
-                        <li><a class="dropdown-item" href="inflation_unemp.html"><strong>Inflation vs Unemployment Rate</strong></a></li>
-                        </ul>    
+                            <li><a class="dropdown-item" href="population.html"><strong>Population</strong></a></li>
+                            <li><a class="dropdown-item" href="gdp.html"><strong>Gross Domestic Product</strong></a></li>
+                            <li><a class="dropdown-item" href="gdp_unemp.html"><strong>Gross Domestic Product vs Unemployment Rates</strong></a></li>
+                            <li><a class="dropdown-item" href="inflation_unemp.html"><strong>Inflation vs Unemployment Rate</strong></a></li>
+                        </ul>
                 </ul>
             </div>
         </div>
-      </nav>
-    
-  <div class='container'>
-    <div id="population">
-      <h2>Population by EU Country</h2>
-      <hr>
-      <div id="map"></div>
+    </nav>
+
+    <div class='container'>
+        <div id="population">
+            <h2>Population by EU Country</h2>
+            <hr>
+            <div id="map"></div>
+
+            <!-- Leaflet JS-->
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <!-- d3 JavaScript -->
+            <script src="https://d3js.org/d3.v6.min.js"></script>
+
+            <!-- Leaflet-Choropleth JavaScript -->
+            <script type="text/javascript" src="../static/choropleth/choropleth.js"></script>
+
+            <!-- Our JS -->
+            <script type="text/javascript" src="../static/choropleth/config.js"></script>
+            <script type="text/javascript" src="../static/choropleth/logic.js"></script>
+        </div>
+
+
     </div>
-      
-      
-  </div>
-  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
+
 </html>
