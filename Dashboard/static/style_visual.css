@@ -1,422 +1,474 @@
-    h1 {
-        margin-left: 20px;
-        margin-bottom: 15px;
-        font-size: 40px;
-        color: yellow;
-        text-decoration: bold;
-    }
-    
-    h2 {
-        font-size: 30px;
-        color: rgb(0, 153, 153);
-        text-align: center;
-        padding-left: 10px;
-        text-decoration: bold;
-    }
-    
-    h3 {
-        color: rgb(0, 153, 153);
-        text-align: left;
-        padding-left: 10px;
-        text-decoration: bold;
-    }
-    
-    h4 {
-        text-align: right;
-        padding-right: 20px;
-        padding-top: 20px;
-        color: #3182bd;
-    }
-    
-    h5 {
-        /*text-align: left; */
-        color: lightblue;
-        font-weight: bold;
-        padding-left: 20px;
-    }
-    /* resource page bullets */
-    
-    ul {
-        margin-left: 40px;
-    }
-    /* Default font style and color of background  */
-    
-    body {
-        background-color: whitesmoke;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 17px;
-    }
-    
-    .background-img {
-        background-image: url("images/economy.jpeg");
-        background-repeat: repeat;
-        background-position: center top;
-        background-color: rgb(15, 15, 107);
-        margin-top: auto;
-    }
-    
-    .resource-col1,
-    .resource-col2 {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        width: 500px;
-        float: left;
-        margin: 10px;
-        margin-right: 30px;
-        padding-left: 30px;
-        margin-left: 30px;
-    }
-    
-    .container {
-        margin-right: 0;
-        margin-left: 30px;
-        padding-left: 10px;
-    }
-    /* Format of navigation bar */
-    
-    .navbar {
-        background-color: rgb(15, 15, 107);
-        margin-bottom: 5px;
-    }
-    /* Color of navbar icon */
-    
-    .navbar-toggler {
-        background-color: lightblue;
-    }
-    /* Footer format */
-    
-    #footer {
-        background-color: lightblue;
-        margin-top: 70px;
-        text-align: right;
-        padding-top: 10px;
-        padding-bottom: 30px;
-        padding-right: 20px;
-        height: 30px;
-    }
-    /* Charts with js */
-    
-    #summary {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        text-align: left;
-        padding: 10px;
-        margin-left: 50px;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-    
-    #main-wrapper,
-    #population,
-    #gdp,
-    #inflation {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        /* margin-left: 10px;
+h1 {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: yellow;
+    text-decoration: bold;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(0, 153, 153);
+    text-align: center;
+    padding-left: 10px;
+    text-decoration: bold;
+}
+
+h3 {
+    color: rgb(0, 153, 153);
+    text-align: left;
+    padding-left: 10px;
+    text-decoration: bold;
+}
+
+h4 {
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 20px;
+    color: #3182bd;
+}
+
+h5 {
+    /*text-align: left; */
+    color: lightblue;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+/* resource page bullets */
+
+ul {
+    margin-left: 40px;
+}
+
+
+/* Default font style and color of background  */
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+
+.background-img {
+    background-image: url("images/economy.jpeg");
+    background-repeat: repeat;
+    background-position: center top;
+    background-color: rgb(15, 15, 107);
+    margin-top: auto;
+}
+
+.resource-col1,
+.resource-col2 {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    width: 500px;
+    float: left;
+    margin: 10px;
+    margin-right: 30px;
+    padding-left: 30px;
+    margin-left: 30px;
+}
+
+.container {
+    margin-right: 0;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+
+
+/* Format of navigation bar */
+
+.navbar {
+    background-color: rgb(15, 15, 107);
+    margin-bottom: 5px;
+}
+
+
+/* Color of navbar icon */
+
+.navbar-toggler {
+    background-color: lightblue;
+}
+
+
+/* Footer format */
+
+#footer {
+    background-color: lightblue;
+    margin-top: 70px;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    height: 30px;
+}
+
+
+/* Charts with js */
+
+#summary {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    text-align: left;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#main-wrapper,
+#population,
+#gdp,
+#inflation {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    /* margin-left: 10px;
     margin-right: 20px;
     margin-bottom: 10px;
     margin-top: 10px; */
-    }
-    
-    #gdp {
-        padding-left:50px;
-        padding-bottom:50px;
-    }
-    
-    #team {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        margin-top: 10px;
-    }
-    
-    .row {
-        margin-top: 0;
-        margin-left: 30px;
-        padding-left: 30px;
-        margin-right: 0;
-    }
-    /* Visualization summary format on temp, cloudiness,
+}
+
+#gdp {
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+#team {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    margin-top: 10px;
+}
+
+.row {
+    margin-top: 0;
+    margin-left: 30px;
+    padding-left: 30px;
+    margin-right: 0;
+}
+
+
+/* Visualization summary format on temp, cloudiness,
 humidity and wind speed pages: landing page */
-    
-    #visuals {
-        background-color: lightblue;
-        border: solid 5px whitesmoke;
-        height: 45%;
-        text-align: center;
-        margin-right: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    /* Comparison page
+
+#visuals {
+    background-color: lightblue;
+    border: solid 5px whitesmoke;
+    height: 45%;
+    text-align: center;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* Comparison page
 .carousel {
     background: lightblue;
     margin-left: 10px;
     margin-right: 10px;
     
 } */
-    
-    .responsive {
-        width: 100%;
-        height: auto;
-    }
-    /* Alignment and positioning of img in carousel */
-    /* .carousel-item img {
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Alignment and positioning of img in carousel */
+
+
+/* .carousel-item img {
     text-align: center;
     padding-top: 80px;
     padding-bottom: 90px;
     padding-left:90px;
     padding-right: 90px;
 } */
-    
-    .dropdown-item {
-        color: darkblue;
-    }
-    
-    .nav-item {
-        color: yellow;
-    }
-    /* table {
+
+.dropdown-item {
+    color: darkblue;
+}
+
+.nav-item {
+    color: yellow;
+}
+
+
+/* table {
 	border-collapse: collapse;
 	border-spacing: 0;
      } */
-    
-    #main-wrapper {
-        margin: 30px auto;
-        max-width: 720px;
-    }
-    
-    #chart {
-        margin: 0px auto;
-        /*	max-width: 600px;*/
-    }
-    
-    text {
-        fill: #000;
-        /*    display: none;*/
-    }
-    
-    text.occlabel {
-        font-size: .7rem;
-        text-anchor: middle;
-    }
-    
-    .clr {
-        clear: both;
-    }
-    
-    .centered {
-        text-align: center;
-    }
-    
-    .hidden {
-        display: none;
-        pointer-events: none;
-    }
-    /* Header
+
+#main-wrapper {
+    margin: 30px auto;
+    max-width: 720px;
+}
+
+#chart {
+    margin: 0px auto;
+    /*	max-width: 600px;*/
+}
+
+text {
+    fill: #000;
+    /*    display: none;*/
+}
+
+text.occlabel {
+    font-size: .7rem;
+    text-anchor: middle;
+}
+
+.clr {
+    clear: both;
+}
+
+.centered {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+
+/* Header
 ============================ */
-    
-    #yearmeta {
-        font-size: 1.3rem;
-    }
-    
-    #curryear {
-        border-bottom: 2px solid #000;
-    }
-    
-    #pauseplay {
-        font-size: .7em;
-        color: #888;
-        cursor: pointer;
-    }
-    /* Controls
+
+#yearmeta {
+    font-size: 1.3rem;
+}
+
+#curryear {
+    border-bottom: 2px solid #000;
+}
+
+#pauseplay {
+    font-size: .7em;
+    color: #888;
+    cursor: pointer;
+}
+
+
+/* Controls
 ============================ */
-    
-    #update {
-        width: 825px;
-        margin: 12px auto 20px auto;
-    }
-    
-    .buttons {
-        float: left;
-        margin-right: 50px;
-    }
-    
-    .button {
-        width: 85px;
-        padding: 5px 5px;
-        margin-right: 10px;
-        cursor: pointer;
-        text-align: center;
-        font-size: .9em;
-        border: 1px solid #e0e0e0;
-        float: left;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-    }
-    
-    .button:hover {
-        background: #e0e0e0;
-    }
-    
-    .button.current {
-        background: #000;
-        color: #fff;
-    }
-    /* Chart
+
+#update {
+    width: 825px;
+    margin: 12px auto 20px auto;
+}
+
+.buttons {
+    float: left;
+    margin-right: 50px;
+}
+
+.button {
+    width: 85px;
+    padding: 5px 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: .9em;
+    border: 1px solid #e0e0e0;
+    float: left;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background: #e0e0e0;
+}
+
+.button.current {
+    background: #000;
+    color: #fff;
+}
+
+
+/* Chart
 ============================ */
-    
-    #chart {
-        position: relative;
-        margin-top: 0px;
-        /*    top: 0px;*/
-    }
-    
-    .axis text {
-        font-size: .7rem;
-    }
-    
-    .axis .axistitle {
-        text-transform: uppercase;
-        font-size: .7rem;
-    }
-    
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: #666;
-        stroke-width: 1px;
-        shape-rendering: crispEdges;
-    }
-    
-    .y.axis path {
-        display: none;
-    }
-    /* Legend
+
+#chart {
+    position: relative;
+    margin-top: 0px;
+    /*    top: 0px;*/
+}
+
+.axis text {
+    font-size: .7rem;
+}
+
+.axis .axistitle {
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.y.axis path {
+    display: none;
+}
+
+
+/* Legend
 ============================ */
-    
-    #legend {
-        float: right;
-        max-width: 600px;
-    }
-    
-    #legend .axistitle {
-        text-transform: uppercase;
-        font-size: .7rem;
-        margin-top: 10px;
-    }
-    
-    #legend text.leglabel {
-        font-size: .7rem;
-        text-anchor: middle;
-    }
-    
-    #legend circle.ind {
-        fill: none;
-        stroke: #084298;
-    }
-    /* Slider */
-    
-    .slide-viewer {
-        position: relative;
-        overflow: hidden;
-        height: 300px;
-    }
-    
-    .slide-group {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-    
-    .slide {
-        width: 100%;
-        height: 100%;
-        display: none;
-        position: absolute;
-    }
-    
-    .slide:first-child {
-        display: block;
-    }
-    
-    .slide-col {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        width: 700px;
-        float: left;
-        margin: 10px;
-        padding-left: 10px;
-    }
-    /* James, add your css here */
-    
-    .countryText {
-        font-family: sans-serif;
-        fill: #fff;
-        text-anchor: middle;
-    }
-    
-    .countryCircle {
-        fill: #4b1348;
-        stroke: #412727;
-    }
-    /* styles the slider */
-    
-    input[type='range'] {
-        -webkit-appearance: none !important;
-        -webkit-border-radius: 5px;
-        background-color: rgb(53, 135, 212);
-        height: 10px;
-        width: 200px;
-        margin: 20px;
-    }
-    
-    input[type='range']::-webkit-slider-thumb {
-        -webkit-appearance: none !important;
-        -webkit-border-radius: 15px;
-        background-color: #bbb;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#888));
-        border: 1px solid #000;
-        height: 25px;
-        width: 25px;
-    }
-    
-    #range {
-        font: 20px sans-serif;
-    }
-    
-    input[type=range] {}
-    
-    div.tooltip {
-        position: absolute;
-        text-align: left;
-        padding: 2px;
-        font: 12px sans-serif;
-        background: #EDEDED;
-        border: 0px;
-        border-radius: 8px;
-        pointer-events: none;
-    }
-    
-    button {
-        width: 4em;
-        height: 2em;
-        background: rgb(53, 135, 212);
-        border: 1px solid rgb(53, 135, 212);
-        border-radius: 4px;
-        color: white;
-        font-size: 1.5em;
-    }
-    
-    .label {
-        font-size: 1.3em;
-        text-align: left;
-    }
-    
-    .x.axis1 {
-        font-size: 0.9em;
-    }
-    
-    .y.axis1 {
-        font-size: 0.9em;
-    }
+
+#legend {
+    float: right;
+    max-width: 600px;
+}
+
+#legend .axistitle {
+    text-transform: uppercase;
+    font-size: .7rem;
+    margin-top: 10px;
+}
+
+#legend text.leglabel {
+    font-size: .7rem;
+    text-anchor: middle;
+}
+
+#legend circle.ind {
+    fill: none;
+    stroke: #084298;
+}
+
+
+/* Slider */
+
+.slide-viewer {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.slide-col {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    width: 700px;
+    float: left;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+
+/* James, add your css here */
+
+.countryText {
+    font-family: sans-serif;
+    fill: #fff;
+    text-anchor: middle;
+}
+
+
+/* .countryCircle {
+    fill: #4b1348;
+    stroke: #412727;
+} */
+
+
+/* styles the slider */
+
+input[type='range'] {
+    -webkit-appearance: none !important;
+    -webkit-border-radius: 5px;
+    background-color: rgb(53, 135, 212);
+    height: 10px;
+    width: 200px;
+    margin: 20px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    -webkit-border-radius: 15px;
+    background-color: #bbb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#888));
+    border: 1px solid #000;
+    height: 25px;
+    width: 25px;
+}
+
+#range {
+    font: 20px sans-serif;
+}
+
+input[type=range] {}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: #EDEDED;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+button {
+    width: 4em;
+    height: 2em;
+    background: rgb(53, 135, 212);
+    border: 1px solid rgb(53, 135, 212);
+    border-radius: 4px;
+    color: white;
+    font-size: 1.5em;
+}
+
+.label {
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.x.axis1 {
+    font-size: 0.9em;
+}
+
+.y.axis1 {
+    font-size: 0.9em;
+}
+
+
+/* body {
+        padding: 0;
+        margin: 0;
+    } */
+
+#map {
+    width: 800px;
+    height: 600px;
+}
+
+.leaflet-popup-content {
+    text-align: center;
+}

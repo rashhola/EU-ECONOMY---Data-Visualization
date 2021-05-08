@@ -35,6 +35,34 @@ $(document).ready(function() {
     // Call the toolTip function.
     svg.call(toolTip);
 
+    // Legend
+    const legwidth = 150;
+
+    let legend = svg.append("g")
+        .attr("id", "legend")
+        .attr("transform", "translate(" + (width - legwidth) + ",0)");
+    legend.append("text")
+        .attr("class", "axistitle")
+        .attr("x", legwidth / 2)
+        .attr("y", 33)
+        .attr("text-anchor", "middle")
+        .text("Population (M)")
+    legend.selectAll(".ind")
+        .data([3, 6, 10])
+        .join("circle")
+        .attr("class", "ind")
+        .attr("r", d => d * 5)
+        .attr("cx", legwidth / 2)
+        .attr("cy", d => legwidth - d * 5);
+    legend.selectAll("#legend text.leglabel")
+        .data([1, 5, 10])
+        .join("text")
+        .attr("class", "leglabel")
+        .attr("x", legwidth / 2)
+        .attr("y", d => legwidth - d * 5)
+        .attr("dy", -13)
+        .text(d => d3.format(",")(d * 10));
+
     d3.csv("../static/phillips_curve/clean_CPI_unemp.csv").then(function(data) {
 
         // set the initial year for the data set to begin
@@ -50,9 +78,9 @@ $(document).ready(function() {
             .domain(d3.extent(data.map(d => +d.Inflation))).nice()
             .range([height, 0]);
 
-        var color = data.map(function(d) {
-            return { color: d.Color };
-        });
+        // var color = data.map(function(d) {
+        //     return { color: d.Color };
+        // });
 
         var xAxis = d3.axisBottom(x);
         var yAxis = d3.axisLeft(y);
@@ -83,6 +111,8 @@ $(document).ready(function() {
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text("Inflation (%)")
+
+
 
         //circles
         circleRadius = 15
