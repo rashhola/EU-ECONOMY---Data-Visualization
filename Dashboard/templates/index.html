@@ -6,7 +6,7 @@
   <title> European Union Economy</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../static/style_visual.css">
-  <script defer src="../static/appIndex.js" type="text/javascript"></script>
+  <!-- <script defer src="appIndex.js" type="text/javascript"></script> -->
 </head>
  
 <body class="background-img">
@@ -40,54 +40,67 @@
       </div>
     </nav>
     
-  <div class='container'>
-      
-    <div class="row">
 
-      <div id="summary" class="col-sm-4">
-        <h2>Project Summary</h2>
-      <hr>
-        <p> <img src="assets/choropleth.png" class=responsive />
-        The purpose of this project is to visualize the European Union's Economic Indicators. 
-        The visualizations will illustrate all current <strong>27 Countries of the European Union</strong> based on the <a href="https://europa.eu/european-union/about-eu/countries_en"><strong>Official Website of the European Union</strong></a>. 
-        Economic indicators such as the <strong>Gross Domestic Product (GDP), Consumer Price Index (CPI), Unemployment Rates and Population</strong> are visualized for each country. The data for these indicators were obtained from 
-        <a href="https://datatopics.worldbank.org/world-development-indicators/themes/economy.html"><strong> The World Bank</strong></a> database.
-        </p> 
-      </div>
-
-      <div class="slide-col">
-        <h2>Economic Indicator Visualizations</h2>
-        <hr>
-        <div class="slider">
-          <div class="slide-viewer">
-            <div class="slide-group">
-              <div class="slide population"><EU Countries by Population></div>
-              <div class="slide gdp_unemp"><GDP vs Unemployment Rates></div>
-              <div class="slide cpi"><Consumer Price Index></div>
-              <div class="slide inflation_unemp"><Inflation vs Unemployment Rate></div>
-            </div>
-          </div>
-          <div class="slide-buttons"></div>
-        </div>
-      </div>
      
-    </div>
-
-  </div>
-  <br>
-    
-      
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+     
+<div class='container'>  
   
-  </div>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2>Project Summary</h2>
+          <hr>
+          <img src="../static/images/population.png" class=responsive />
+          <p>The purpose of this project is to visualize the European Union's Economic Indicators. 
+          The visualizations will illustrate all current <strong>27 Countries of the European Union</strong> based on the <a href="https://europa.eu/european-union/about-eu/countries_en"><strong>Official Website of the European Union</strong></a>. 
+          Economic indicators such as the <strong>Gross Domestic Product (GDP), Consumer Price Index (CPI), Unemployment Rates and Population</strong> are visualized for each country. The data for these indicators were obtained from 
+          <a href="https://datatopics.worldbank.org/world-development-indicators/themes/economy.html"><strong> The World Bank</strong></a> database.
+          </p>        
+        </div>
 
-  <div id="footer" class="col-md-12">
-    <p>&copy; Copyright <a href="https://kfmatovic716.github.io/SQLING-PYTHONS---Data-Visualization-Project/">The SQLing Pythons - USC Data Science BootCamp 2021</a></p>
-  </div>
+        <div class="carousel-item">
+          <h4>Gross Domestic Product (per capita - USD)</h4>
+          <hr>
+          <a href="gdp.html"><img src="../static/images/gdp.png" class="d-block w-100" alt="gdp" width=80%/></a>  
+        </div>
 
-  </body>
+        <div class="carousel-item">
+          <h4>Population by EU Country</h4>
+          <hr>
+          <a href="population.html"><img src="../static/images/population.png" class="d-block w-100" alt="population" width=80%/></a>
+        </div>
+
+        <div class="carousel-item">
+          <h4>GDP & Unemployment Rate</h4>
+          <hr>
+          <a href="gdp_unemp.html"><img src="../static/images/unemployment.png" class="d-block w-100" alt="unemployment" width=80%/></a>
+        </div>
+
+        <div class="carousel-item">
+          <h4>Inflation Rate vs Unemployment by EU Population</h4>
+          <hr>
+          <a href="inflation_unemp.html"><img src="../static/images/inflation.png" class="d-block w-100" alt="inflation" width=80%/></a>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div> 
+
+<footer>
+  <p>&copy; Copyright <a href="https://kfmatovic716.github.io/EU-ECONOMY---Data-Visualization/">The SQLing Pythons - USC Data Science BootCamp 2021</a></p></p>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+</body>
 </html>
 
