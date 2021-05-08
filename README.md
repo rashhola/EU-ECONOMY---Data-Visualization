@@ -42,12 +42,12 @@ Website: <a href="https://kfmatovic716.github.io/EU-ECONOMY---Data-Visualization
 ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/population.png?raw=true)
 
 ### Bar Chart Race: Gross Domestic Product per capita (D3)
-![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/gdp.png?raw=true)
+![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/gdp.PNG?raw=true)
 
 ### Animated Beeswarm: Gross Domestic Product (per capita) vs Unemployment Rates (D3)
 ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/unemployment.png?raw=true)
 
 ### Animated Bubble Chart: Inflation Rate vs Unemployment Rates (D3)
-![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/inflation.png?raw=true)
+![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/inflation.PNG?raw=true)
    
 
