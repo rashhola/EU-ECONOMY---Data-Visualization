@@ -38,15 +38,15 @@
 ## VISUALIZATIONS
 
 ### Choropleth/Heatmap: Population by EU Country
-![](https://github.com/kfmatovic716/EU ECONOMY---Data-Visualization/blob/main/images/population.png?raw=true)
+![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/population.png?raw=true)
 
 ### Bar Chart Race: Gross Domestic Product (per capita)
-    ![](https://github.com/kfmatovic716/EU ECONOMY---Data-Visualization/blob/main/images/gdp.png?raw=true)
+    ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/gdp.png?raw=true)
 
 ### Animated Beeswarm: Gross Domestic Product (per capita) vs Unemployment Rates
-    ![](https://github.com/kfmatovic716/EU ECONOMY---Data-Visualization/blob/main/images/unemployment.png?raw=true)
+    ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/unemployment.png?raw=true)
 
 ### Phillips Curve: Inflation Rate vs Unemployment Rates
-    ![](https://github.com/kfmatovic716/EU ECONOMY---Data-Visualization/blob/main/images/inflation.png?raw=true)
+    ![](https://github.com/kfmatovic716/EU-ECONOMY---Data-Visualization/blob/main/images/inflation.png?raw=true)
    
 
