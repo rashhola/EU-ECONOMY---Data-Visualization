@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> European Union Economy</title>
+
+  <!-- Bootstrap and Masonry CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  
+  <!-- CSS file-->
+  <link rel="stylesheet" type="text/css" href="../static/style_visual.css">
+
+  <!-- D3 CDN -->
+  <script src="https://d3js.org/d3.v5.min.js"></script> 
+  <!-- Leaflet CSS-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Dependencies of phillips_curve-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="../static/phillips_curve/html5slider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+  <!-- JS Charts -->
+  <script defer type="text/javascript" src="../static/beeswarm/appBeeswarm.js"></script>
+  <script defer type="text/javascript" src="../static/barchartrace/appBar.js"></script>
+  <script defer type="text/javascript" src="../static/phillips_curve/appPhillips.js"></script>
+
+  
+  
+  </head>
+ 
+<body>
+
+  <!-- Start of Navigation Bar -->
+  
+  <nav class="navbar navbar-light" style= "background: url('https://pes.cor.europa.eu/sites/default/files/styles/article__news___detailpage/public/articles/coins-1600.jpeg?itok=0zyfBY4B');
+    background-size: cover; color: burlywood"> 
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"><h1><a href="index_masonry.html"></a> The European Union Economy</h1>
+      </span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index_masonry.html"><h5>HOME</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="resources.html"><h5>RESOURCES</h5></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <h5>ECONOMIC INDICATORS</h5></a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="population.html"><strong>Population</strong></a></li>
+                      <li><a class="dropdown-item" href="gdp.html"><strong>Gross Domestic Product</strong></a></li>
+                      <li><a class="dropdown-item" href="gdp_unemp.html"><strong>Gross Domestic Product vs Unemployment Rates</strong></a></li>
+                      <li><a class="dropdown-item" href="inflation_unemp.html"><strong>Inflation vs Unemployment Rate</strong></a></li>
+                      </ul>
+                  </li>
+              </ul>
+            </div>
+      </div>
+  </nav>
+    <!-- End of Navigation Bar -->
+  
+  <!-- start of Masonry Grid -->
+  <div class="grid">
+
+    <!-- First Grid Item: Project Summary -->
+    <div class="grid-item">
+      <h3> PROJECT SUMMARY: The purpose of this project is to visualize the European Union's Economic Indicators. 
+        The visualizations will illustrate all current <strong>27 Countries of the European Union</strong> based on the <a href="https://europa.eu/european-union/about-eu/countries_en"><strong>Official Website of the European Union</strong></a>. 
+        Economic indicators such as the <strong>Gross Domestic Product (GDP), Consumer Price Index (CPI), Unemployment Rates and Population</strong> are visualized for each country. The data for these indicators were obtained from 
+        <a href="https://datatopics.worldbank.org/world-development-indicators/themes/economy.html"><strong> The World Bank</strong></a> database.
+        </h3>        
+    </div>
+
+    <!-- Second Grid Item: Choropleth Map -->
+    <div class="grid-item" id="choroplethChart">
+      <h2>Population by EU Country</h2>
+      <hr>
+      <div id="map"></div>
+
+      <!-- Leaflet JS-->
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+      <!-- d3 JavaScript -->
+      <!-- <script src="https://d3js.org/d3.v6.min.js"></script> -->
+
+      <!-- Leaflet-Choropleth JavaScript -->
+      <script type="text/javascript" src="../static/choropleth/choropleth.js"></script>
+
+      <!-- Our JS -->
+      <script type="text/javascript" src="../static/choropleth/config.js"></script>
+      <script type="text/javascript" src="../static/choropleth/logic.js"></script>
+    </div>
+
+    <!-- Third Grid Item: Beeswarm Chart -->
+    <div class="grid-item" id="beeswarm">
+        <h2>Unemployment Rates vs GDP Per Capita</h2>
+        <hr>
+        <div id="yearmeta" class="centered">
+          Year <span id="curryear"></span>
+          <span id="pauseplay">(Pause)</span>
+        </div>
+        
+        <div id="beeswarmChart"></div>
+        
+        <div class="clr"></div>
+      </div>
+
+    <!-- Fourth Grid Item: Bar Chart Race -->
+    <div class="grid-item" id="gdpChart" style="text-align: center">
+      <h2>Top 12 EU Countries: Gross Domestic Product Per Capita (in USD)</h2>
+      <hr>
+      <input id="slider" type="range" min="2005" max="2019" value="2005" step="1" />
+        <span id="range">2005</span>
+        <button name="play" id="play">Play</button>
+      <div id="barchart"></div>
+    </div> 
+    
+    <!-- Fifth Grid Item: Animated Bubbles Chart-->
+    <div class="grid-item" id="inflation" style= "text-align: center" >
+      <h2>Inflation vs Unemployment Rates</h2>
+      <hr>
+    
+        <input id="slider" type="range" min="2005" max="2019" value="2005" step="1" />
+        <span id="range">2005</span>
+        <button name="play" id="play">Play</button>
+        <div id="chart"></div>
+    </div>
+    
+  </div> <!-- End of Masonry Grid -->
+
+  <!-- Additional JS: Masonry library -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>   
+  <script>
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry( elem, {  
+    itemSelector: '.grid-item',
+    gutter: 10,
+    columnWidth: 10,
+  });
+     
+  </script>
+
+
+
+<!-- <div class='container'>  
+  
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2>Project Summary</h2>
+          <hr>
+          <img src="../static/images/population.png" class=responsive />
+          <p>The purpose of this project is to visualize the European Union's Economic Indicators. 
+          The visualizations will illustrate all current <strong>27 Countries of the European Union</strong> based on the <a href="https://europa.eu/european-union/about-eu/countries_en"><strong>Official Website of the European Union</strong></a>. 
+          Economic indicators such as the <strong>Gross Domestic Product (GDP), Consumer Price Index (CPI), Unemployment Rates and Population</strong> are visualized for each country. The data for these indicators were obtained from 
+          <a href="https://datatopics.worldbank.org/world-development-indicators/themes/economy.html"><strong> The World Bank</strong></a> database.
+          </p>        
+        </div>
+
+        <div class="carousel-item">
+          <h4>Gross Domestic Product (per capita - USD)</h4>
+          <hr>
+          <a href="gdp.html"><img src="../static/images/gdp.png" class="d-block w-100" alt="gdp" width=80%/></a>  
+        </div>
+
+        <div class="carousel-item">
+          <h4>Population by EU Country</h4>
+          <hr>
+          <a href="population.html"><img src="../static/images/population.png" class="d-block w-100" alt="population" width=80%/></a>
+        </div>
+
+        <div class="carousel-item">
+          <h4>GDP & Unemployment Rate</h4>
+          <hr>
+          <a href="gdp_unemp.html"><img src="../static/images/unemployment.png" class="d-block w-100" alt="unemployment" width=80%/></a>
+        </div>
+
+        <div class="carousel-item">
+          <h4>Inflation Rate vs Unemployment by EU Population</h4>
+          <hr>
+          <a href="inflation_unemp.html"><img src="../static/images/inflation.png" class="d-block w-100" alt="inflation" width=80%/></a>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>  -->
+<!-- 
+<footer>
+  <p>&copy; Copyright <a href="https://kfmatovic716.github.io/EU-ECONOMY---Data-Visualization/">The SQLing Pythons - USC Data Science BootCamp 2021</a></p></p>
+</footer> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+

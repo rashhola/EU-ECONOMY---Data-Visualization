@@ -4,7 +4,7 @@
         padding-left: 5px;
         font-size: 40px;
         color: yellow;
-        text-decoration: underline;
+        text-decoration: bold;
     }
     
     h2 {
@@ -16,12 +16,36 @@
         text-decoration: bold;
     }
     
+    /* Masonry Styling */
     h3 {
-        color: rgb(0, 153, 153);
-        text-align: left;
-        padding-left: 10px;
-        text-decoration: bold;
+        color: whitesmoke;
+        text-align:justify;
+        /* padding-left: 30px; */
+        padding-right: 30px;
     }
+
+    .grid-item {
+        margin-bottom: 20px;
+        margin-left:30px;
+    }
+
+    #beeswarm {
+        border: solid 5px whitesmoke;
+        background-color: lightblue;
+        width: 1000px;
+    }
+    
+    #choroplethChart {
+        border: solid 5px whitesmoke;
+        background-color: lightblue;
+    }
+
+    #gdpChart {
+        border: solid 5px whitesmoke;
+        background-color: lightblue;
+       
+    }
+    /* ------------------- */
     
     h4 {
         text-align:center;
@@ -32,7 +56,7 @@
     
     h5 {
         /*text-align: left; */
-        color: lightblue;
+        color: yellow;
         font-weight: bold;
         padding-left: 20px;
     }
@@ -43,19 +67,20 @@
     /* Default font style and color of background  */
     
     body {
-        background-color: whitesmoke;
+        background-color: darkblue;
         font-family: 'Times New Roman', Times, serif;
         font-size: 17px;
     }
     
     .background-img {
-        background-image: url("images/economy.jpeg");
-        background-repeat: repeat;
-        background-position: center top;
+        /* background-image: url("images/economy.jpeg"); */
+        /* background-repeat: repeat;
+        background-position: center top; */
         background-color: rgb(15, 15, 107);
         margin-top: auto;
     }
     
+     
     .resource-col1,
     .resource-col2 {
         border: solid 5px whitesmoke;
@@ -76,13 +101,47 @@
     /* Format of navigation bar */
     
     .navbar {
+        text-align: right;
         background-color: rgb(15, 15, 107);
         margin-bottom: 5px;
+    }
+
+
+    .navbar-toggler-icon {
+        background-color: yellow;
+        opacity: 0.6;
+    }
+
+    .dropdown-menu {
+        width: 400px;
+        margin-left: 950px;
+        text-align: right;
+        background-color: darkblue;
+        opacity: 0.7;
+    }
+
+
+    
+ 
+
+    .dropdown-menu.show {
+        display:block;
+        margin-left: auto;
     }
     /* Color of navbar icon */
     
     .navbar-toggler {
-        background-color: lightblue;
+        background-color:darkblue;
+        opacity: 0.7;
+        text-align: right;
+    }
+
+    .dropdown-item {
+        color: yellow;
+    }
+    
+    .nav-item {
+        color: yellow;
     }
     /* Footer format */
     
@@ -97,7 +156,7 @@
         height: 40px;
     }
    
-   /* Charts with js */
+   /* Separate Charts with js */
     #main-wrapper, 
     #population {
         border: solid 5px whitesmoke;
@@ -114,8 +173,8 @@
         background-color: lightblue;
         margin-bottom: 20px;
         padding-left: 20px;
-        width:fit-content;
-        margin-left: 350px; 
+        width:900px;
+        /* margin-left: 350px;  */
     }
     
     #gdp {
@@ -124,10 +183,20 @@
         margin-bottom: 20px;
         width:fit-content;
         margin-left: 200px;
-        /* padding-left:50px; */
+        padding-left:50px; 
         padding-bottom:50px;
-        margin-right: 20px
+        margin-right: 20px 
     }
+
+    #gdpBar {
+        border: solid 5px whitesmoke;
+        background-color: lightblue;
+
+    }
+    /* #barchart {
+        margin: 0px auto;
+        padding-left:0;
+        width:800px; */
     
     #team {
         border: solid 5px whitesmoke;
@@ -177,13 +246,7 @@
         margin-bottom: 20px;
     }
 
-    .dropdown-item {
-        color: darkblue;
-    }
-    
-    .nav-item {
-        color: yellow;
-    }
+   
     
     
     #main-wrapper {
@@ -194,6 +257,7 @@
     
     #chart {
         margin: 0px auto;
+        padding-left:0;
         width:1000px;
         
     }

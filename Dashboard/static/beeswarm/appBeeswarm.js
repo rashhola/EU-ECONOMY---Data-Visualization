@@ -11,11 +11,11 @@ const padding = 3; // Space between nodes
 	 
 // Dimensions of chart.
 let margin = { top: 20, right: 8, bottom: 50, left: 55 },
-      width = parseInt(d3.select('#chart').style('width'), 10) - margin.left - margin.right,
+      width = parseInt(d3.select('#beeswarmChart').style('width'), 10) - margin.left - margin.right,
       height = 900 - margin.top - margin.bottom; 
 
 // Creates & appends svg object "chart" & "y-axis" with above dimensions
-let svg = d3.select("#chart").append("svg")
+let svg = d3.select("#beeswarmChart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
 
