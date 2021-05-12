@@ -63,10 +63,15 @@ $(document).ready(function() {
         .attr("dy", -13)
         .text(d => d3.format(",")(d * 10));
 
-    d3.csv("../static/phillips_curve/clean_CPI_unemp.csv").then(function(data) {
+    d3.csv("static/phillips_curve/clean_CPI_unemp.csv").then(function(data) {   
+        console.log(data)})
+
+    d3.json("appPhillips").then(function(data) {
+        
+        console.log(data)
 
         // set the initial year for the data set to begin
-        current_year = data.filter(d => d.Year === '2005')
+        current_year = data.filter(d => d.Year == '2005')
 
         var x = d3.scaleLinear()
             // add the + sign to convert strings to integers

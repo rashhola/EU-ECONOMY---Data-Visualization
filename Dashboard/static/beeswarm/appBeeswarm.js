@@ -84,7 +84,10 @@ legend.selectAll("#legend text.leglabel")
 
 
 // Load data.
-const insertData = d3.csv("../static/beeswarm/unemp_EU4.csv", d3.autoType);
+// const insertData = d3.json("/appbeeswarm", d3.autoType); using json
+// const insertData = d3.csv("../static/beeswarm/unemp_EU4.csv", d3.autoType);
+
+const insertData = d3.json("/appbeeswarm", d3.autoType);
 
 // when data is loaded, create node to be used in the force simulation
 // each country gets a node

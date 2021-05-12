@@ -46,7 +46,9 @@ var barPadding = (height - (margin.bottom + margin.top)) / (top_n * 5);
 var year = 2005;
 var pause = false;
 
-d3.csv("../static/barchartrace/Clean_GDP.csv").then(function (data) {
+// d3.json("/appEUgdp").then(function(response)
+
+d3.json("appBar").then(function (data) {
   //if (error) throw error;
 
 
